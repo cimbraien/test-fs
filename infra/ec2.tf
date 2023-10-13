@@ -21,8 +21,7 @@ resource "aws_instance" "ec2" {
 		sudo usermod -a -G docker ec2-user
 		sudo curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 		sudo chmod +x /usr/local/bin/docker-compose
-		ECR_URL=${data.aws_caller_identity.current.account_id}.dkr.ecr.${var.aws_region}.amazonaws.com
-		aws ecr get-login-password | docker login ECR_URL
-		docker pull ${ECR_URL}/${data.aws_ecr_repository.ecr_backend.name}:latest
+		aws ecr get-login-password | docker login ${local.ECR_URL}
+		docker pull ${local.ECR_URL}/${aws_ecr_repository.ecr_backend.name}:latest
 	EOF
 }
