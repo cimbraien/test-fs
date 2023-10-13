@@ -2,12 +2,17 @@
   "compilerOptions": {
     "target": "ES2016",
     "module": "NodeNext",
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": ["node_modules", "node_modules/@types", "src/common/definitions"],
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "NodeNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["reflect-metadata"],
+    "lib": ["ES6"],
+    "noImplicitAny": false
   }
 }

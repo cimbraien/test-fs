@@ -1,0 +1,43 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   
+	password  String
+  name      String?
+  createdAt DateTime @default(now())
+
+	@@unique([email])
+}
+
+model Product {
+  id        		String  	@id @default(auto()) @map("_id") @db.ObjectId
+	categoryId		String		@db.ObjectId
+	categoryName	String
+	name					String
+	sku						String?
+	description		String?
+	weight				Int
+	length				Int
+	height				Int
+	imageUrl			String?
+	price					Int
+	createdAt			DateTime 	@default(now())
+	updatedAt			DateTime 	@default(now())
+	updatedBy			String		@db.ObjectId
+
+	@@index([categoryId])
+	@@index([updatedAt(sort: Desc)])
+}
+
+model Category {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name			String
+}
