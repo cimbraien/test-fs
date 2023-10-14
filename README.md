@@ -34,3 +34,27 @@ $ npm install
 $ npm run build
 $ node ./dist/app.js
 ```
+
+## Frontend
+(Optional) Install yarn:
+```console
+$ npm i -g yarn
+```
+
+Install the dependencies:
+```console
+$	yarn install
+```
+or
+```console
+$ npm install
+```
+
+### Start development server
+```console
+$ yarn start
+```
+or
+```console
+$ npm run start
+```

@@ -6,7 +6,7 @@ import { fetchProductDetails, fetchProducts, setCurrentPage } from "../redux/pro
 import ProductDetailModal from "./ProductDetailModal";
 import { Button, Typography } from "@mui/material";
 
-const itemsPerPage = 2;
+const itemsPerPage = 10;
 
 export const ProductContainer = () => {
   const dispatch = useDispatch<AppDispatch>();
