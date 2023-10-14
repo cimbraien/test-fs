@@ -18,6 +18,7 @@ export class ProductRepository implements IRepository<Product> {
     return await this.prisma.client.product.findMany({
       skip,
       take: limit,
+      orderBy: [{ updatedAt: "desc" }],
     });
   }
 
