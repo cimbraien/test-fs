@@ -37,6 +37,6 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "migrate": "prisma generate --schema ./src/prisma/schema.prisma",
-    "setup": "yarn install && yarn build"
+    "setup": "yarn install && yarn migrate && yarn build"
   }
 }
