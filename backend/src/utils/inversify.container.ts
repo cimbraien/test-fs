@@ -9,6 +9,8 @@ import { type } from "../constants/inversify.constant";
 import { ProductRepository } from "../modules/product/product.repository";
 import { ProductService } from "../modules/product/product.service";
 import { ProductController } from "../modules/product/product.controller";
+import { ImageController } from "../modules/image/image.controller";
+import { S3Service } from "../modules/image/s3.service";
 
 const container = new Container({ defaultScope: "Singleton" });
 container.bind(AppRouter).to(AppRouter);
@@ -21,5 +23,8 @@ container.bind<UserController>(type.UserController).to(UserController);
 container.bind<ProductRepository>(type.ProductRepository).to(ProductRepository);
 container.bind<ProductService>(type.ProductService).to(ProductService);
 container.bind<ProductController>(type.ProductController).to(ProductController);
+
+container.bind<ImageController>(type.ImageController).to(ImageController);
+container.bind<S3Service>(type.S3Service).to(S3Service);
 
 export default container;

@@ -8,4 +8,7 @@ export const type = {
   ProductController: Symbol("ProductController"),
   ProductService: Symbol("ProductService"),
   ProductRepository: Symbol("ProductRepository"),
+
+  ImageController: Symbol("ImageController"),
+  S3Service: Symbol("S3Service"),
 };
