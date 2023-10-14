@@ -4,4 +4,8 @@ export const type = {
   UserController: Symbol("UserController"),
   UserService: Symbol("UserService"),
   UserRepository: Symbol("UserRepository"),
+
+  ProductController: Symbol("ProductController"),
+  ProductService: Symbol("ProductService"),
+  ProductRepository: Symbol("ProductRepository"),
 };

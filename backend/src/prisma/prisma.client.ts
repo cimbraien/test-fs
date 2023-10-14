@@ -5,7 +5,7 @@ import { injectable } from "inversify";
 export class Prisma {
   public client: PrismaClient;
 
-  constructor(){
-		this.client = new PrismaClient();
-	}
+  constructor() {
+    this.client = new PrismaClient();
+  }
 }

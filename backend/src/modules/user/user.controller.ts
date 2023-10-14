@@ -44,6 +44,6 @@ export class UserController extends BaseController {
     const accessToken = await this.userService.login(loginDto);
 
     this.logger.log(LOGLEVEL.TRACE, "done logging-in user");
-    return new OkResponse(res, {accessToken});
+    return new OkResponse(res, { accessToken });
   }
 }

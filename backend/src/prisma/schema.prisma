@@ -37,7 +37,7 @@ model Product {
 	@@index([updatedAt(sort: Desc)])
 }
 
-model Category {
+model ProductCategory {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   name			String
 }

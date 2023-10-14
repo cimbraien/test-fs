@@ -23,6 +23,7 @@
     "install": "^0.13.0",
     "inversify": "^6.0.1",
     "joi": "^17.11.0",
+    "joi-objectid": "^4.0.2",
     "jsonwebtoken": "^9.0.2",
     "npm": "^10.2.0",
     "prisma": "^5.4.2",

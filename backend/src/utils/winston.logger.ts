@@ -10,14 +10,13 @@ export enum LOGLEVEL {
 }
 
 export class LoggerUtil {
-
   static getLogger(context?: String) {
     return createLogger({
-        levels: this.getLevels(),
-        format: format.combine(format.timestamp(), format.json()),
-        transports: [new Console({ level: APP_LOG_LEVEL })],
-        defaultMeta: { context },
-      });
+      levels: this.getLevels(),
+      format: format.combine(format.timestamp(), format.json()),
+      transports: [new Console({ level: APP_LOG_LEVEL })],
+      defaultMeta: { context },
+    });
   }
 
   private static getLevels() {

@@ -1,7 +1,6 @@
 import { inject, injectable } from "inversify";
 import { IRepository } from "../../interfaces/repository.interface";
 import { User } from "@prisma/client";
-import { ObjectId } from "bson";
 import { Prisma } from "../../prisma/prisma.client";
 import { type } from "../../constants/inversify.constant";
 
